@@ -1,9 +1,9 @@
 package Cuentas;
-import Transacciones.Transaccion;
+import Exceptions.CuentaNoDisponible;
+import Exceptions.ErrorEnBaseDeDatos;
+import Exceptions.NoPoseeTipoDeCuenta;
 
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 
@@ -13,7 +13,6 @@ public class Cliente {
     private long cuit = 0;
     private Cuenta cuentaActiva;
     private HashMap<Integer, Cuenta> cuentas = new HashMap<Integer, Cuenta>();
-    private Stack<Transaccion> transacciones = new Stack<Transaccion>();
 
     public void setNumeroTarjeta(long numeroTarjeta) {
         this.numeroTarjeta = numeroTarjeta;
@@ -31,11 +30,10 @@ public class Cliente {
         this.cuentaActiva = cuentaActiva;
     }
 
-    //TODO: Customizar el error, "No posee xxxx (nombre de la cuenta)" --> usar un enum
-    public Cuenta getCuenta(int id) {
+    public Cuenta getCuenta(int id) throws NoPoseeTipoDeCuenta {
         Cuenta cuenta = cuentas.get(id);
         if(cuenta == null) {
-            throw new Error("No posee el tipo de cuenta " + id);
+            throw new NoPoseeTipoDeCuenta("No posee el tipo de cuenta " + id);
         }
         return cuenta;
     }
@@ -44,12 +42,21 @@ public class Cliente {
         return cuentas;
     }
 
-    public void login() throws TarjetaNoReconocida, PinInvalido, NoHayCuentasDisponibles {
+    public void login()throws TarjetaNoReconocida, PinInvalido, NoHayCuentasDisponibles, ErrorEnBaseDeDatos, CuentaNoDisponible {
         this.getInfoValidaciones();
         this.getInfoClientes();
     }
 
-    private void getInfoValidaciones() throws PinInvalido, TarjetaNoReconocida {
+    public boolean cuentaOperanMoneda(Moneda moneda) {
+        for(Map.Entry<Integer, Cuenta> cuenta : getCuentas().entrySet()) {
+            if(cuenta.getValue().operaMoneda(moneda)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private void getInfoValidaciones() throws ErrorEnBaseDeDatos {
         try {
             List<String[]> clientes = getInfoFile("validaciones.txt");
             ListIterator<String[]> iterator = clientes.listIterator();
@@ -62,19 +69,19 @@ public class Cliente {
 
                 if(numeroTarjeta == this.numeroTarjeta && pin == this.pin ) {
                     this.cuit = cuit;
-                }else if(pin != this.pin){
+                }else if(numeroTarjeta == this.numeroTarjeta && pin != this.pin){
                     throw new PinInvalido();
                 }
             }
             if(this.cuit == 0) {
                 throw new TarjetaNoReconocida();
             }
-        }catch (IOException e) {
-            //TODO: RETORNA UN ERROR MAS FRIENDLY, "HUBO UN PROBLEMA EN NUESTRA BASE, VUELVA A INTENTERLO MAS TARDE."
+        }catch (IOException | TarjetaNoReconocida | PinInvalido e) {
+            throw new ErrorEnBaseDeDatos();
         }
     }
 
-    private void getInfoClientes() throws NoHayCuentasDisponibles {
+    private void getInfoClientes() throws NoHayCuentasDisponibles, ErrorEnBaseDeDatos {
         try {
             List<String> listaAlias = new ArrayList<String>();
             List<String[]> cuentas = getInfoFile("clientes.txt");
@@ -91,11 +98,11 @@ public class Cliente {
                 this.getInfoCuentas(listaAlias);
             }
         }catch (IOException e) {
-            //TODO: RETORNA UN ERROR MAS FRIENDLY, "HUBO UN PROBLEMA EN NUESTRA BASE, VUELVA A INTENTERLO MAS TARDE."
+            throw new ErrorEnBaseDeDatos();
         }
     }
 
-    private void getInfoCuentas(List<String> listaAlias) {
+    private void getInfoCuentas(List<String> listaAlias) throws ErrorEnBaseDeDatos {
         try {
             List<String[]> cuentas = getInfoFile("cuentas.txt");
             for(String[] cuenta: cuentas) {
@@ -112,13 +119,12 @@ public class Cliente {
                     }else if(tipoCuenta == TipoDeCuenta.CajaDeAhorroEnDolares.getValor()) {
                         this.cuentas.put(tipoCuenta, new CajaAhorroDolares(alias, monto));
                     }else {
-                        //TODO: Crear custom error para el error de cuenta no disponible (Error en el archivo)
-                        throw new Error("No encontro cuentas disponibles");
+                        throw new CuentaNoDisponible();
                     }
                 }
             }
-        }catch (IOException e) {
-            //TODO: RETORNA UN ERROR MAS FRIENDLY, "HUBO UN PROBLEMA EN NUESTRA BASE, VUELVA A INTENTERLO MAS TARDE."
+        }catch (IOException | CuentaNoDisponible e) {
+            throw new ErrorEnBaseDeDatos();
         }
     }
 
@@ -134,34 +140,5 @@ public class Cliente {
         }
         reader.close();
         return registros;
-    }
-
-    public void agregarTransaccion(Transaccion transaccion) throws IOException {
-        this.transacciones.push(transaccion);
-        //TODO: Quizas la misma transaccion deba guardarse en el archivo de movimientos
-        this.guardarTransacciones(transaccion);
-    }
-
-    public Stack<Transaccion> getTransacciones() {
-        return transacciones;
-    }
-
-    //TODO: Validar si la pila posee transacciones antes de ejecutarse
-    public Transaccion getTransaccion() {
-        return this.transacciones.peek();
-    }
-
-    //TODO: Quizas la misma transaccion deba guardarse en el archivo de movimientos
-    private static void guardarTransacciones(Transaccion transaccion) throws IOException {
-        String path = System.getProperty("user.dir");
-        FileWriter flwriter = null;
-        flwriter = new FileWriter(path + "/movimientos.txt", true);
-        BufferedWriter bfwriter = new BufferedWriter(flwriter);
-        bfwriter.write(transaccion.getFechaCreacion() + ", " +
-                transaccion.getTipo() + "," +
-                transaccion.getOrigen().getAlias() + ", $" +
-                String.format("%.2f",transaccion.getMonto()));
-        bfwriter.newLine();
-        bfwriter.close();
     }
 }

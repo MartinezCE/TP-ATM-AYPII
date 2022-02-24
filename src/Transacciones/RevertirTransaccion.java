@@ -1,7 +1,8 @@
 package Transacciones;
 
 import Cuentas.ErrorSaldo;
+import Exceptions.OperacionErroneaParaTipoMoneda;
 
 public interface RevertirTransaccion {
-    public void revertir() throws ErrorSaldo, ErrorCuenta;
+    public String revertir() throws ErrorSaldo, ErrorCuenta, OperacionErroneaParaTipoMoneda;
 }

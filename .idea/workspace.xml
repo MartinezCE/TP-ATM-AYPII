@@ -1,7 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="034f6e2c-f954-4452-939c-585767a2234a" name="Default Changelist" comment="" />
+    <list default="true" id="034f6e2c-f954-4452-939c-585767a2234a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Comprobante/Comprobante.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Comprobante/ComprobanteCompraDolares.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Comprobante/ComprobanteDeposito.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Comprobante/ComprobanteRetiroEfectivo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Comprobante/ComprobanteRevertirTransaccion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Comprobante/ComprobanteRevertirTransferencia.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Comprobante/ComprobanteTransferencia.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Cuentas/CuentaNoDisponible.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Cuentas/ErrorEnBaseDeDatos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Cuentas/NoPoseeTipoDeCuenta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Cuentas/OperacionErroneaParaTipoMoneda.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Transacciones/MostrarAlias.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Transacciones/MostrarUltimasTransacciones.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cuentas/CajaAhorroDolares.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cuentas/CajaAhorroDolares.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cuentas/CajaAhorroPesos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cuentas/CajaAhorroPesos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cuentas/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cuentas/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cuentas/Cuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cuentas/Cuenta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cuentas/CuentaCorriente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cuentas/CuentaCorriente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cuentas/EjecutarTransaccion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cuentas/ErrorSaldo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cuentas/ErrorSaldo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cuentas/ErrorUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cuentas/ErrorUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cuentas/Moneda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cuentas/Moneda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cuentas/NoHayCuentasDisponibles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cuentas/NoHayCuentasDisponibles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cuentas/TipoDeCuentas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cuentas/TipoDeCuentas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CuentasTest/CuentasTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dispensador/Billete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dispensador/Billete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dispensador/Dia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dispensador/Dia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dispensador/DispensadorDeEfectivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dispensador/DispensadorDeEfectivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dispensador/NoHaySaldoSuficiente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dispensador/NoHaySaldoSuficiente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dispensador/billeteDeCien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dispensador/billeteDeCien.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dispensador/billeteDeMil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dispensador/billeteDeMil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dispensador/billeteDeQuinientos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dispensador/billeteDeQuinientos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Perifericos/ATM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Perifericos/ATM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Transacciones/ComprarDolares.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transacciones/ComprarDolares.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Transacciones/DepositoPesos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transacciones/DepositoPesos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Transacciones/ErrorCuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transacciones/ErrorCuenta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Transacciones/RetirarPesos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transacciones/RetirarPesos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Transacciones/RevertirTransaccion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transacciones/RevertirTransaccion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Transacciones/Ticket.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Transacciones/TipoDeTransacciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transacciones/TipoDeTransacciones.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Transacciones/Transaccion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transacciones/Transaccion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Transacciones/TransferenciaBancaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transacciones/TransferenciaBancaria.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,26 +59,61 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1cyV50aIC7ruFnquFTL3RtvqClm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Cuentas" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Cuentas" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/Comprobante" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Cuentas" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Transacciones" />
       <recent name="Cuentas" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Cuentas" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="atm" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -56,10 +140,68 @@
     </task>
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="533" y="152" key="#com.intellij.ide.util.MemberChooser" timestamp="1591543623891">
+    <state x="458" y="197" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1591563161660">
       <screen x="0" y="23" width="1440" height="825" />
     </state>
-    <state x="533" y="152" key="#com.intellij.ide.util.MemberChooser/0.23.1440.825@0.23.1440.825" timestamp="1591543623891" />
+    <state x="458" y="197" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.23.1440.825@0.23.1440.825" timestamp="1591563161660" />
+    <state x="533" y="152" key="#com.intellij.ide.util.MemberChooser" timestamp="1591740977541">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state x="533" y="152" key="#com.intellij.ide.util.MemberChooser/0.23.1440.825@0.23.1440.825" timestamp="1591740977541" />
+    <state width="439" height="466" key="DebuggerActiveHint" timestamp="1591743505071">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state width="439" height="466" key="DebuggerActiveHint/0.23.1440.825@0.23.1440.825" timestamp="1591743505071" />
+    <state width="1398" height="163" key="GridCell.Tab.0.bottom" timestamp="1591847674438">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state width="1398" height="163" key="GridCell.Tab.0.bottom/0.23.1440.825@0.23.1440.825" timestamp="1591847674438" />
+    <state width="1398" height="163" key="GridCell.Tab.0.center" timestamp="1591847674437">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state width="1398" height="163" key="GridCell.Tab.0.center/0.23.1440.825@0.23.1440.825" timestamp="1591847674437" />
+    <state width="1398" height="163" key="GridCell.Tab.0.left" timestamp="1591847674436">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state width="1398" height="163" key="GridCell.Tab.0.left/0.23.1440.825@0.23.1440.825" timestamp="1591847674436" />
+    <state width="1398" height="163" key="GridCell.Tab.0.right" timestamp="1591847674437">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state width="1398" height="163" key="GridCell.Tab.0.right/0.23.1440.825@0.23.1440.825" timestamp="1591847674437" />
+    <state width="1398" height="264" key="GridCell.Tab.1.bottom" timestamp="1591750198190">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state width="1398" height="264" key="GridCell.Tab.1.bottom/0.23.1440.825@0.23.1440.825" timestamp="1591750198190" />
+    <state width="1398" height="264" key="GridCell.Tab.1.center" timestamp="1591750198189">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state width="1398" height="264" key="GridCell.Tab.1.center/0.23.1440.825@0.23.1440.825" timestamp="1591750198189" />
+    <state width="1398" height="264" key="GridCell.Tab.1.left" timestamp="1591750198189">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state width="1398" height="264" key="GridCell.Tab.1.left/0.23.1440.825@0.23.1440.825" timestamp="1591750198189" />
+    <state width="1398" height="264" key="GridCell.Tab.1.right" timestamp="1591750198190">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state width="1398" height="264" key="GridCell.Tab.1.right/0.23.1440.825@0.23.1440.825" timestamp="1591750198190" />
+    <state x="386" y="197" width="667" height="476" key="find.popup" timestamp="1591847607381">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state x="386" y="197" width="667" height="476" key="find.popup/0.23.1440.825@0.23.1440.825" timestamp="1591847607381" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Transacciones/MostrarUltimasTransacciones.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

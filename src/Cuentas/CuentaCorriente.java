@@ -1,5 +1,6 @@
 package Cuentas;
 
+import Exceptions.OperacionErroneaParaTipoMoneda;
 import Transacciones.*;
 
 import java.util.HashMap;
@@ -19,14 +20,13 @@ public class CuentaCorriente extends Cuenta {
 
     @Override
     public HashMap<Integer, Transaccion> transaccionesDisponibles() {
-        //TODO: Chequear el orden de las transacciones
         HashMap<Integer, Transaccion> transacciones = new HashMap<Integer, Transaccion>();
         transacciones.put(TipoDeTransacciones.Retirar.getValor(), new RetirarPesos(this));
-        //TODO: Chequear de agregar la cuenta destino, quizas sea mejor con un setter
         transacciones.put(TipoDeTransacciones.Comprar.getValor(), new ComprarDolares(this));
         transacciones.put(TipoDeTransacciones.Depositar.getValor(), new DepositoPesos(this));
-        //TODO: Chequear de agregar la cuenta destino, quizas sea mejor con un setter
         transacciones.put(TipoDeTransacciones.Transferir.getValor(), new TransferenciaBancaria(this));
+        transacciones.put(TipoDeTransacciones.MonstrarAlias.getValor(), new MostrarAlias(this));
+        transacciones.put(TipoDeTransacciones.MostrarUltimasTransacciones.getValor(), new MostrarUltimasTransacciones(this));
         return transacciones;
     }
 
@@ -36,10 +36,10 @@ public class CuentaCorriente extends Cuenta {
     }
 
     @Override
-    public boolean extraer(double monto, Moneda moneda) {
+    public boolean extraer(double monto, Moneda moneda) throws OperacionErroneaParaTipoMoneda {
         //TODO: Crear custom error
-        if (this.operaMoneda(moneda)) {
-            throw new Error("No opera con el timpo de moneda");
+        if (!operaMoneda(moneda)) {
+            throw new OperacionErroneaParaTipoMoneda();
         }
         double saldo = this.getSaldo();
         if(saldo < monto) {
@@ -54,10 +54,10 @@ public class CuentaCorriente extends Cuenta {
     }
 
     @Override
-    public boolean depositar(double monto, Moneda moneda) {
+    public boolean depositar(double monto, Moneda moneda) throws OperacionErroneaParaTipoMoneda {
         //TODO: Crear custom error
-        if (this.operaMoneda(moneda)) {
-            throw new Error("No opera con el timpo de moneda");
+        if (!operaMoneda(moneda)) {
+            throw new OperacionErroneaParaTipoMoneda();
         }
         double saldo = this.getSaldo();
         saldo += monto;
