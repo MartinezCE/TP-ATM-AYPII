@@ -1,13 +1,3 @@
-# Trabajo Práctico 1: ATM
-
-Integrantes: Adrián Rojas
-
-Hernán Piancatelli
-
-Cristian Martinez
-
-Mauro Ludueña
-
 ## Decisiones de diseño
 
 El enfoque del diseño se basó en una estructura orientada a objetos, mediante la implementación de interfaces y herencia de clases abstractas.
